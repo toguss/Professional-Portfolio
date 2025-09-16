@@ -1,31 +1,68 @@
+*{
+    box-sizing: border-box;
+}
 body{
     font-family: Arial, sans-serif;
     margin: 0;
     line-height: 1.6;
 }
-
-header{
+.navbar{
     background: #222;
     color: #fff;
     padding: 1rem;
 }
-
 header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 header nav ul{
     list-style: none;
     display: flex;
     gap: 1.5rem;
 }
-
 header nav ul li a{
     color: #fff;
     text-decoration: none;
 }
+
+.namePic{
+    display: flex;
+    justify-content: flex-start;
+    padding: 2rem 0;
+}
+
+.branding{
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+    margin-left: 10%;
+
+    border: 2px solid #333;
+    border-radius: 12px;
+    padding: 5rem 6rem;
+    background: #fff;
+
+}
+.branding h1{
+    transition: transform 0.3s ;
+}
+.branding h1:hover{
+    transform: scale(1.2);
+}
+
+.headshot{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.headshot:hover{
+    transform: scale(1.2);
+}
+
+
 
 section{
     padding: 2rem;
@@ -40,9 +77,11 @@ section{
     border-radius: 8px;
 }
 
+
 footer{
     background: #222;
     color: #ccc;
     text-align: center;
     padding: 1rem;
 }
+
