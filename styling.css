@@ -24,31 +24,74 @@ header nav ul{
 header nav ul li a{
     color: #fff;
     text-decoration: none;
+    display: inline-block;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.2s ease, border-bottom 0.1s ease, transform 0.2s ease;
+}
+header nav ul li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00aaff;
+    transition: width 0.5s ease;
+}
+header nav ul li a:hover{
+    transform: scale(1.1);
+    color: #00aaff;
+}
+header nav ul li a:hover::after{
+    width: 100%;
 }
 
-.namePic{
-    display: flex;
-    justify-content: flex-start;
-    padding: 2rem 0;
+.hero-left .first{
+    font-weight: 400;
+    color: #444;
+}
+.hero-left .last{
+    font-weight: 550;
+    color: #000;
 }
 
-.branding{
-    display: flex;
-    align-items: center;
-    gap: 7rem;
-    margin-left: 10%;
 
-    border: 2px solid #333;
-    border-radius: 12px;
-    padding: 5rem 6rem;
+.hero{
+    display: flex;
+    min-height: 80vh;
+    margin-bottom: 2rem;
+}
+
+.hero-left{
+    flex: 1;
     background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 1px solid #ddd;
+}
 
+.hero-left h1{
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    white-space: nowrap;
 }
-.branding h1{
-    transition: transform 0.3s ;
+.hero-left h3{
+    font-weight: normal;
+    color: #555;
+    margin-bottom: 1rem;
 }
-.branding h1:hover{
-    transform: scale(1.2);
+
+.hero-right{
+    flex: 2;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
 }
 
 .headshot{
@@ -62,7 +105,21 @@ header nav ul li a{
     transform: scale(1.2);
 }
 
+.contactLinks{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
 
+.contactLinks a{
+    text-decoration: none;
+    color: #07c;
+    transition: color 0.3s;
+}
+
+.contactLinks a:hover{
+    color:#005fa3;
+}
 
 section{
     padding: 2rem;
@@ -85,3 +142,22 @@ footer{
     padding: 1rem;
 }
 
+@media(max-width: 768px){
+    .hero{
+        flex-direction: column;
+    }
+    .hero-left{
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+    .hero-left h1{
+        white-space: normal;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .contactLinks{
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
