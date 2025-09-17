@@ -1,5 +1,11 @@
-<!-- to upload to github use 
+<!-- TO DO MAIN THINGS
+    
+    to upload to github use 
     "/c/Users/HULK 2.0/OneDrive/Documents/GitHub/Professional-Portfolio"
+
+    See if i can expand the webpage sideways can worry about how it looks on phone later when im done with computer screen
+
+    SEE IF ACTUALLY UPLOADED TO MY WEBPAGE TSTEPHENS.DEV IF NOT DO THIS FIRST
 -->
 
 <!DOCTYPE html>
@@ -10,12 +16,14 @@
     <title>Tomas Stephens | Portfolio</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="  crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="styling.css?v=4">
 </head>
 
 <body>
 
 <!-- Nav Bar -->
+ <!-- clean up -->
  <header class="navbar">   
     <nav>
         <ul>
@@ -27,16 +35,24 @@
     </nav>
 </header>
 
-
+<!-- add two or 3 more links to make it look like a pyramid -->
 <section class="hero">
     <div class="hero-left">
         <img src="Images/tomas-headshop.jpg" alt="TomasPicture" class="headshot">
+
         <h1><span class="first">Tomas</span> <span class="last">Stephens</span></h1>
         <h3>Computer Engineering Student</h3>
+
         <div class="contactLinks">
-            <a href=""mailto:stephenstomas@gmail.com">Email</a>
-            <a href="https://github.com/toguss" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://linkedin.com/in/tstephens04/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:stephenstomas@gmail.com">
+                <i class="fa-solid fa-envelope"></i>Email
+            </a>
+            <a href="https://github.com/toguss" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="https://linkedin.com/in/tstephens04/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
         </div>
     </div>
     
@@ -51,7 +67,7 @@
 
 
 
-<!-- Skills -->
+<!-- Skills 
  <section id = "skills">
     <h2>Skills</h2>
     <ul>
@@ -62,30 +78,47 @@
         <li>Control Systems</li>
     </ul>
  </section>
+ -->
 
- <section id = "projects">
+
+ <!-- Get more projects and images and longer about -->
+ <!-- once get images see if the images mess with which project is which(aka maybe add border) -->
+<section>
     <h2>Projects</h2>
-    <div class = "project">
-        <h3>Boat Race Controller</h3>
-        <p>Designed a control system in MATLAB and implemented pole-zero analysis for stability test</p>
-<!-- GITHUB LINK HERE -->
+    <!-- Project 1 -->
+    <div class="project">
+        <div class="project-image">
+            <img>
+        </div>
+        
+        <div class="project-info">
+            <h3>Personal Portfolio Proejct</h3>
+            <p>
+                Built with HTML, CSS, and JavaScript to showcase skills, projects, and contact information in a clean, responsive layout
+            </p>
+            <a href="https://github.com/toguss/Professional-Portfolio" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> View on GitHub
+            </a>
+        </div>
     </div>
- </section>
 
- <!-- Contact Info -->
-<section id = "contact">
-    <h2>Contact Information</h2>
-    <p>Email: </p>
-    <p>LinkedIn: </p>
-    <p>GitHub: </p>
+    <!-- Project 2 -->
+    <div class="project">
+        <div class="project-image">
+            <img>
+        </div>
+
+        <div class="project-info">
+            <h3>Boat Race</h3>
+            <p>
+                Designed a fully autonomous boat using arduino
+            </p>
+            <a href="https://github.com/toguss/boat-race" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> View on GitHub
+            </a>
+        </div>
+    </div>
 </section>
-
-
-
-
-
-
-
 
 
 
