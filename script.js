@@ -1,11 +1,11 @@
 // Getting % sign for proficiency skills
 document.querySelectorAll('.fill').forEach(fill =>{
     const percent = fill.getAttribute('data-percent');
-    fill.style.setProperty('--percent',percent + '%');
+    fill.style.setProperty('--percent', percent+'%');
     fill.querySelector('span').textContent = percent + '%';
 });
 
-// Dragging and dropping reordering of skills
+/*Dragging and dropping reordering of skills
 const skillsContainer = document.querySelector('.skills-container');
 let dragging;
 
@@ -42,4 +42,19 @@ function getDragAfterElement(container, y){
             return closest;
         }
     }, {offset: Number.NEGATIVE_INFINITY}).element
-}
+}*/
+
+document.querySelectorAll('.skill-card').forEach(card =>{
+    const fill = card.querySelector('.fill');
+    const percent = fill.getAttribute('data-percent');
+
+    card.addEventListener('mouseleave', () => {
+        fill.style.width = '0%';
+        fill.querySelector('span').textContent = '';
+    });
+
+    card.addEventListener('mouseenter', () => {
+        fill.style.width = percent + '%';
+        fill.querySelector('span').textContent = percent + '%';
+    });
+});

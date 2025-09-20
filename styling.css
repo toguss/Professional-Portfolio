@@ -128,73 +128,96 @@ header nav ul li a:hover::after{
     color:#005fa3;
 }
 
+
+
 #skills{
-    max-width: 800px;
+    max-width: 900px;
     margin: 3rem auto;
     padding: 2rem;
-}
-#skills h2{
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
     text-align: center;
-}
-#skills .subtitle{
-    text-align: center;
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 1.5rem;
-    font-style: italic;
 }
 .skills-container{
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    transition: all 0.25s ease;
+    gap: 1rem;
+    justify-content: center;
 }
 .skill-card{
-    background: #fff;
+    width: 50px;
+    height: 200px;
+    background: #f4f4f4;
     border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 1rem 1.5rem;
-    box-shadow: 1 2px 6px rgba(0,0,0,0.05);
-    cursor: grab;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-.skill-card:active{
-    cursor: grabbing;
-    transform: scale(1.02);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-.skill-card h3{
-    margin: 0 0 0.5rem;
+.skill-title{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-weight: bold;
     font-size: 1rem;
-    font-weight: 600;
+    color: #333;
+    transition: all 0.3s ease;
+    padding: 1rem;
+}
+.skill-content{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+.skill-card:hover{
+    width: 250px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.skill-card:hover .skill-title{
+    writing-mode: horizontal-tb;
+    transform: rotate(0);
+    margin-bottom: 0.5rem;
+}
+.skill-card:hover .skill-content{
+    display: flex;
+}
+.skill-content .label{
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
 }
 .progress-bar{
+    width: 90%;
     background: #e0e0e0;
     height: 14px;
     border-radius: 7px;
     overflow: hidden;
     position: relative;
+    margin-top: 0.5rem;
 }
 .fill{
     height: 100%;
     background: #0077cc;
     border-radius: 7px;
-    width: var(--percent, 0%);
+    width: 0%;
     transition: width 0.8s ease-in-out;
     position: relative;
 }
 .fill span{
     position: absolute;
-    right: 8px;
+    right: 6px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 0.75rem;
     font-weight: bold;
     color: #fff;
-    opacity: 0.9;
 }
+
+
 
 #projects{
     max-width: 1000px;
