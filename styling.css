@@ -326,8 +326,9 @@ header nav ul li a:hover::after{
 
 section{
     padding: 2rem;
-    width: 1660px;
+    max-width: 1660px;
     margin:auto;
+    width: 100%;
 }
 footer{
     background: #222;
@@ -336,13 +337,51 @@ footer{
     padding: 1rem;
 }
 
+@media(max-width: 1024px){
+    .her{
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-left, .hero-right{
+        flex: none;
+        width: 100%;
+    }
+    #skills-involvement{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .skills-container{
+        justify-content: center;
+    }
+    .project{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
 @media(max-width: 768px){
+    .navbar{
+        padding: 0.5rem;
+    }
+    header nav ul{
+        gap: 0.8rem;
+        font-size: 0.9rem;
+    }
+
     .hero{
         flex-direction: column;
     }
     .hero-left{
         border-right: none;
         border-bottom: 1px solid #ddd;
+        font-size: 1.8rem;
+    }
+    .headshot{
+        width: 150px;
+        height: 150px;
     }
     .hero-left h1{
         white-space: normal;
@@ -353,5 +392,26 @@ footer{
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
+    }
+
+    .skill-card{
+        width: 60px;
+        height: 150px;
+    }
+    .skill-card:hover{
+        width: 200px;
+    }
+    #involve{
+        padding: 1rem;
+    }
+    .involvement-container{
+        gap: 1rem;
+    }
+    .involvement-card{
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    #projects{
+        padding: 2rem 1rem;
     }
 }
