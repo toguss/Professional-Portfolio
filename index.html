@@ -1,9 +1,9 @@
 <!-- TO DO MAIN THINGS
     
-    to upload to github use 
+    to upload to GitHub use
     "/c/Users/HULK 2.0/OneDrive/Documents/GitHub/Professional-Portfolio"
 
-    See if i can expand the webpage sideways can worry about how it looks on phone later when im done with computer screen
+    See if I can expand the webpage sideways can worry about how it looks on phone later when im done with computer screen
 -->
 
 <!DOCTYPE html>
@@ -26,17 +26,16 @@
  <header class="navbar">   
     <nav>
         <ul>
-            <li><a href="#contact">Contact</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#resume">Resume</a></li>
+            <li><a href="resume.html">Resume</a></li>
         </ul>
     </nav>
 </header>
 
 <!-- add two or 3 more links to make it look like a pyramid -->
-<section class="hero">
+<section class="hero" id="about">
     <div class="hero-left">
         <img src="Images/tomas-headshop.jpg" alt="TomasPicture" class="headshot">
 
@@ -57,7 +56,7 @@
         </div>
     </div>
     
-    <div class="hero-right" id="About">
+    <div class="hero-right" id="Abouttwo">
         <h2>About</h2>
         <p>
             I’m a Computer Engineering student passionate about building both hardware and software projects.
@@ -70,7 +69,8 @@
 
 <!-- Skills -->
 <!-- Progress Bars -->
-<section id="skills">
+<section id="skills-involvement">
+    <div class="skills-side">
     <h2>Skills</h2>
     <div class="skills-container">
         <div class="skill-card" draggable="true">
@@ -120,23 +120,41 @@
                 </div>
             </div>
         </div>
+    </div>
+    </div>
 
+    <div class="involvement-side">
+    <h2>Involvement</h2>
+    <div class="involvement-container">
+        <div class="involvement-card">
+            <h3>IEEE</h3>
+            <p>Participated in the Internal Programs Competition where me and a teammate competed against others having free limitation on what to create</p>
+        </div>
+
+        <div class="involvement-card">
+            <h3>Great Orange Navel Boat Race</h3>
+            <p>Build and raced an autonomous boat making it circle the UCF reflection pond</p>
+        </div>
+
+    </div>
     </div>
 </section>
 
 
+
+
  <!-- Get more projects and images and longer about -->
  <!-- once get images see if the images mess with which project is which(aka maybe add border) -->
-<section>
+<section id="projects">
     <h2>Projects</h2>
     <!-- Project 1 -->
     <div class="project">
         <div class="project-image">
-            <img>
+            <img alt="">
         </div>
         
         <div class="project-info">
-            <h3>Personal Portfolio Proejct</h3>
+            <h3>Personal Portfolio Project</h3>
             <p>
                 Built with HTML, CSS, and JavaScript to showcase skills, projects, and contact information in a clean, responsive layout
             </p>
@@ -149,7 +167,7 @@
     <!-- Project 2 -->
     <div class="project">
         <div class="project-image">
-            <img>
+            <img alt="">
         </div>
 
         <div class="project-info">
