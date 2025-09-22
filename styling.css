@@ -338,9 +338,11 @@ footer{
 }
 
 @media(max-width: 1024px){
-    .her{
+    .hero{
         flex-direction: column;
         text-align: center;
+        align-items: center;
+        padding: 1rem;
     }
     .hero-left, .hero-right{
         flex: none;
