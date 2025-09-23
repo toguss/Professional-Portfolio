@@ -97,12 +97,15 @@ header nav ul li a:hover::after{
 }
 .hero-right{
     flex: 2;
-    background: #f8f9fa;
+    background: #dddddd;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 3rem;
+    border-radius: 12px;
+    padding-top: 10rem;
 }
+
 .headshot{
     width: 200px;
     height: 200px;
@@ -134,6 +137,12 @@ header nav ul li a:hover::after{
     color:#005fa3;
 }
 
+.section-divider{
+    border: none;
+    border-top: 1px solid black;
+    margin: 2rem auto;
+    width: 90%;
+}
 
 
 #skills{
@@ -148,6 +157,7 @@ header nav ul li a:hover::after{
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    padding-bottom: 3rem;
 }
 .skill-card{
     width: 50px;
@@ -178,9 +188,10 @@ header nav ul li a:hover::after{
     align-items: center;
     gap: 2rem;
     width: 100%;
+    padding: 1rem 1.5rem;
 }
 .skill-card:hover{
-    width: 250px;
+    width: 350px;
     background: #fff;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
@@ -211,7 +222,7 @@ header nav ul li a:hover::after{
     height: 100%;
     background: #0077cc;
     border-radius: 7px;
-    width: 0%;
+    width: 0;
     transition: width 0.8s ease-in-out;
     position: relative;
 }
@@ -223,6 +234,11 @@ header nav ul li a:hover::after{
     font-size: 0.75rem;
     font-weight: bold;
     color: #fff;
+}
+.skill-content p{
+    /*margin: 0;*/
+    max-width: 100%;
+    line-height: 1.4;
 }
 
 #skills-involvement{
@@ -320,6 +336,66 @@ header nav ul li a:hover::after{
 }
 .project-info a:hover{
     color: #005fa3;
+}
+
+
+#fun-facts{
+    margin: 3rem auto;
+    padding: 2rem;
+    max-width: 900px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+.facts-wrapper{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    align-items: flex-start;
+}
+.facts-generator{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#currentFact{
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    min-height: 2rem;
+}
+#factButton{
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    background: #0077cc;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+#factButton:hover{
+    background: #005fa3;
+}
+#collectedFacts{
+    flex: 1;
+    max-height: 200px;
+    overflow-y: auto;
+    border-left: 1px solid #ddd;
+    padding-left: 1rem;
+}
+#collectedFacts ul{
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+#collectedFacts li{
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
 }
 
 
