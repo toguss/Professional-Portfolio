@@ -466,6 +466,9 @@ footer{
         text-align: center;
         font-size: 2rem;
     }
+    .hero-right{
+        padding-top: 2rem;
+    }
     .contactLinks{
         flex-direction: column;
         align-items: center;
@@ -473,11 +476,18 @@ footer{
     }
 
     .skill-card{
-        width: 60px;
-        height: 150px;
+        width: 100%;
+        height: auto;
     }
     .skill-card:hover{
         width: 200px;
+    }
+    .skill-content{
+        display: flex;
+    }
+    .skill-title{
+        writing-mode: horizontal-tb;
+        transform: rotate(0);
     }
     #involve{
         padding: 1rem;
@@ -491,5 +501,15 @@ footer{
     }
     #projects{
         padding: 2rem 1rem;
+    }
+    .facts-wrapper{
+        flex-direction: column;
+    }
+    #collectedFacts{
+        border-left: none;
+        border-top: 1px solid #ddd;
+        margin-top: 1rem;
+        padding-left: 0;
+        padding-top: 1rem;
     }
 }
