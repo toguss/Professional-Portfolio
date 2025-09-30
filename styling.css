@@ -7,8 +7,8 @@ body{
     margin: 0;
     line-height: 1.6;
     padding-top: 70px;
-    background: #1a1a1a;
-    color: #f5f5f5;
+    background: #fff;
+    color: #111;
 }
 .navbar{
     background: #000;
@@ -31,7 +31,7 @@ header nav ul{
     gap: 1.5rem;
 }
 header nav ul li a{
-    color: #fff;
+    color: #f5f5f5;
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -45,25 +45,65 @@ header nav ul li a::after{
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #F59E0B;
+    background-color: #555;
     transition: width 0.5s ease;
 }
 header nav ul li a:hover{
     transform: scale(1.1);
-    color: #F59E0B;
+    color: #ccc;
 }
 header nav ul li a:hover::after{
     width: 100%;
 }
+.lever-toggle{
+    width: 60px;
+    height: 30px;
+    background: #ddd;
+    border-radius: 30px;
+    position: relative;
+    margin-left: auto;
+    margin-right: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+.lever{
+    width: 26px;
+    height: 26px;
+    background: #111;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    transition: left 0.3s ease, background 0.3s ease;
+}
+.lever-toggle.active{
+    background: #333;
+}
+.lever-toggle.active .lever{
+    left: 32px;
+    background: #FFD700;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 .hero-left .first{
     font-weight: 400;
-    color: #444;
+    color: #111;
 }
 .hero-left .last{
     font-weight: 550;
-    color: #000;
+    color: #111;
 }
 .hero{
     display: flex;
@@ -72,13 +112,13 @@ header nav ul li a:hover::after{
 }
 .hero-left{
     flex: 1;
-    background: #2a2a2a;
+    background: #f9f9f9;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 12px;
 }
 .hero-left h1{
@@ -100,7 +140,7 @@ header nav ul li a:hover::after{
 }
 .hero-right{
     flex: 2;
-    background: #2a2a2a;
+    background: #eaeaea;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -131,25 +171,25 @@ header nav ul li a:hover::after{
 .contactLinks a{
     display: flex;
     align-items: center;
-    color: #FFD700;
+    color: #444;
     font-size: 1rem;
     text-decoration: none;
     transition: color 0.1s ease, transform 0.2s ease;
 }
 .contactLinks a:hover{
-    color:#ffea70;
+    color:#000;
 }
 
 .section-divider{
     border: none;
-    border-top: 1px solid black;
+    border-top: 1px solid #aaa;
     margin: 2rem auto;
     width: 90%;
 }
 
 
 #skills{
-    max-width: 900px;
+    max-width: 1100px;
     margin: 3rem auto;
     padding: 2rem;
     text-align: center;
@@ -163,10 +203,10 @@ header nav ul li a:hover::after{
     padding-bottom: 3rem;
 }
 .skill-card{
-    width: 50px;
+    width: 55px;
     height: 200px;
-    background: #2a2a2a;
-    border: 1px solid #3a3a3a;
+    background: #111;
+    border: 1px solid #333;
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.4s ease;
@@ -178,11 +218,9 @@ header nav ul li a:hover::after{
     color: #ffffff;
 }
 .skill-title{
-    background: linear-gradient(90deg, #FFD700, #ccc);
+    background: #ffffff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     font-weight: bold;
@@ -202,7 +240,8 @@ header nav ul li a:hover::after{
 .skill-card:hover{
     width: 350px;
     background: #2a2a2a;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transform: translateY(-6px) scale(1.15);
 }
 .skill-card:hover .skill-title{
     writing-mode: horizontal-tb;
@@ -229,11 +268,12 @@ header nav ul li a:hover::after{
 }
 .fill{
     height: 100%;
-    background: #0077cc;
+    background: #444;
     border-radius: 7px;
     width: 0;
     transition: width 0.8s ease-in-out;
     position: relative;
+
 }
 .fill span{
     position: absolute;
@@ -255,11 +295,13 @@ header nav ul li a:hover::after{
     justify-content: space-between;
     align-items: flex-start;
     gap: 2rem;
-    max-width: 1200px;
+    background: linear-gradient(135deg, #d1d1d1, #f0f0f0);
+    border-radius: 50px;
+    max-width: 80%;
     margin: 4rem auto;
     padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-
 .skills-side, .involvement-side{
     flex: 1;
     text-align: center;
@@ -267,8 +309,24 @@ header nav ul li a:hover::after{
 .skills-side h2, .involvement-side h2{
     margin-bottom: 2rem;
     font-size: 1.8rem;
-    color: #f5f5f5;
+    color: #111;
 }
+.highlight-card{
+    background: #111;
+    color: #eeeeee;
+    border-left: 5px solid #8B0000;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.highlight-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+
 
 #involve{
     max-width: 1100px;
@@ -288,12 +346,12 @@ header nav ul li a:hover::after{
     gap: 1.5rem;
 }
 .involvement-card{
-    background: #2a2a2a;
+    background: #111;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #ffffff;
+    color: #eee;
 }
 .involvement-card:hover{
     transform: translateY(-4px);
@@ -302,11 +360,11 @@ header nav ul li a:hover::after{
 .involvement-card h3{
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
-    color: #0077cc;
+    color: #ccc;
 }
 .involvement-card p{
     font-size: 0.95rem;
-    color: #444;
+    color: #bbb;
     line-height: 1.4;
 }
 
@@ -330,7 +388,7 @@ header nav ul li a:hover::after{
     width: 100vw;
     top: 50%;
     height: 3px;
-    background: gold;
+    background: #555;
     transform: translateY(-50%);
     z-index: 1;
 }
@@ -376,8 +434,8 @@ header nav ul li a:hover::after{
     transform: translate(-50%, -50%);
     width: 14px;
     height: 14px;
-    background: gold;
-    border: 2px solid #111;
+    background: #111;
+    border: 2px solid #fff;
     border-radius: 50%;
     z-index: 3;
 }
@@ -401,7 +459,8 @@ header nav ul li a:hover::after{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background: #222;
+    background: #111;
+    color: #fff;
     padding: 0.55rem 1rem;
     border-radius: 8px;
     min-width: 180px;
@@ -421,12 +480,12 @@ header nav ul li a:hover::after{
 }
 .course-box .short{
     margin: 0;
-    color: #cfcfcf;
+    color: #ccc;
 }
 .course-box .details{
     display: none;
     margin-top: 0.4rem;
-    color: #ddd;
+    color: #aaa;
     font-size: 0.9rem;
 }
 .timeline-item.top .course-box{
@@ -472,18 +531,18 @@ header nav ul li a:hover::after{
 }
 .project-info h3{
     margin-bottom: 0.5rem;
-    color: #FFD700;
+    color: #333;
 }
 .project-info a{
     display: inline-block;
     margin-top: 1rem;
     text-decoration: none;
-    color: #FFD700;
+    color: #333;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 .project-info a:hover{
-    color: #ffea70;
+    color: #000;
 }
 
 
@@ -491,8 +550,9 @@ header nav ul li a:hover::after{
     margin: 3rem auto;
     padding: 2rem;
     max-width: 900px;
-    background: #f9f9f9;
+    background: #fff;
     border: 1px solid #ddd;
+    color: #111;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.02);
 }
@@ -522,13 +582,13 @@ header nav ul li a:hover::after{
     font-size: 1rem;
     border: none;
     border-radius: 6px;
-    background: #0077cc;
-    color: white;
+    background: #111;
+    color: #fff;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 #factButton:hover{
-    background: #005fa3;
+    background: #333;
 }
 #collectedFacts{
     flex: 1;
@@ -555,8 +615,8 @@ section{
     width: 100%;
 }
 footer{
-    background: #222;
-    color: #ccc;
+    background: #000;
+    color: #777;
     text-align: center;
     padding: 1rem;
 }
