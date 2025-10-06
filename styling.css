@@ -180,6 +180,53 @@ header nav ul li a:hover::after{
     width: 90%;
 }
 
+.goal-timeline{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.goal-column h3{
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #222;
+}
+.goal-card {
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 1rem 1.2rem 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.goal-card h4{
+    margin: 0.2rem;
+    font-size: 1rem;
+    color: #111;
+}
+.goal-card p{
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+.short-term h3 {
+    border-bottom: 3px solid darkred;
+    padding-bottom: 0.25rem;
+}
+.mid-term h3{
+    border-bottom: 3px solid darkred;
+    padding-bottom: 0.25rem;
+}
+.long-term h3{
+    border-bottom: 3px solid darkred;
+    padding-bottom: 0.25rem;
+}
+
+
+
 
 #skills{
     max-width: 1100px;
