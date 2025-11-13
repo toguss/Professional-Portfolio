@@ -59,36 +59,6 @@ header nav ul li a:hover{
 header nav ul li a:hover::after{
     width: 100%;
 }
-.lever-toggle{
-    width: 60px;
-    height: 30px;
-    background: #ddd;
-    border-radius: 30px;
-    position: relative;
-    margin-left: auto;
-    margin-right: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    transition: background-color 0.2s;
-}
-.lever{
-    width: 26px;
-    height: 26px;
-    background: #111;
-    border-radius: 50%;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    transition: left 0.3s ease, background 0.3s ease;
-}
-.lever-toggle.active{
-    background: #333;
-}
-.lever-toggle.active .lever{
-    left: 32px;
-    background: #FFD700;
-}
 
 .hero-left .first{
     font-weight: 400;
@@ -368,14 +338,11 @@ header nav ul li a:hover::after{
     box-shadow: 0 8px 12px rgba(0,0,0,0.2);
 }
 
-
-
 #involve{
     max-width: 1100px;
     margin: 4rem auto;
     padding: 2rem;
 }
-
 #involve h3{
     text-align: center;
     margin-bottom: 2rem;
@@ -409,7 +376,6 @@ header nav ul li a:hover::after{
     color: #111;
     line-height: 1.4;
 }
-
 
 #coursework{
     margin: 4rem auto;
@@ -463,8 +429,6 @@ header nav ul li a:hover::after{
     min-width: 220px;
     margin: 0 4rem;
 }
-
-
 .timeline-item:nth-child(odd){
     margin-left: 2rem;
 }
@@ -517,7 +481,6 @@ header nav ul li a:hover::after{
     background: #555;
     transform: translateX(-50%) scale(1.05);
 }
-
 .course-box h3{
     margin: 0 0 0.25rem;
     color: #fff;
@@ -550,9 +513,6 @@ header nav ul li a:hover::after{
     margin-left: 30%;
     justify-content: right;
 }
-
-
-
 #projects{
     max-width: 1660px;
     margin: auto;
@@ -577,9 +537,6 @@ header nav ul li a:hover::after{
 .project:hover{
     transform: translateY(-6px) scale(1.02);
 }
-
-
-
 .project:nth-child(odd){
     flex-direction: row-reverse;
 }
@@ -634,9 +591,6 @@ header nav ul li a:hover::after{
     width: 100%;
 }
 
-
-
-
 #fun-facts{
     margin: 3rem auto;
     padding: 2rem;
@@ -659,7 +613,6 @@ header nav ul li a:hover::after{
     flex-direction: column;
     align-items: center;
 }
-
 #currentFact{
     margin-bottom: 1rem;
     font-weight: bold;
@@ -696,9 +649,6 @@ header nav ul li a:hover::after{
     margin-bottom: 0.5rem;
     font-size: 0.95rem;
 }
-
-
-
 section{
     padding: 2rem;
     max-width: 1660px;
@@ -711,126 +661,314 @@ footer{
     text-align: center;
     padding: 1rem;
 }
-
-
 .project-detail{
     text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* For Ipad use */
 @media(max-width: 1024px){
+    body{
+        padding-top: 60px;
+    }
+    header nav{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    header nav ul{
+        gap: 1rem;
+        font-size: 1rem;
+    }
+
     .hero{
         flex-direction: column;
-        text-align: center;
         align-items: center;
-        padding: 1rem;
+        text-align: center;
+        padding: 1rem 1.5rem;
+        gap: 2rem;
     }
     .hero-left, .hero-right{
-        flex: none;
         width: 100%;
+        border: none;
+        border-radius: 12px;
     }
+    .hero-left{
+        order: 1;
+        padding: 2rem 1.5rem;
+    }
+    .hero-right{
+        order: 2;
+        padding: 3rem 1.5rem;
+        margin-top: -1rem;
+    }
+
+    .headshot{
+        width: 170px;
+        height: 170px;
+    }
+
     #skills-involvement{
         flex-direction: column;
         align-items: center;
         text-align: center;
+        border-radius: 30px;
+        padding: 2rem 1.5rem;
+        gap: 3rem;
+        width: 90%;
     }
     .skills-container{
         justify-content: center;
+        gap: 1rem;
     }
-    .project{
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-
-
-@media(max-width: 768px){
-    .navbar{
-        padding: 0.5rem;
-    }
-    header nav ul{
-        gap: 0.8rem;
-        font-size: 0.9rem;
-    }
-
-    .hero{
-        flex-direction: column;
-    }
-    .hero-left{
-        border-right: none;
-        border-bottom: 1px solid #ddd;
-        font-size: 1.8rem;
-    }
-    .headshot{
-        width: 150px;
-        height: 150px;
-    }
-    .hero-left h1{
-        white-space: normal;
-        text-align: center;
-        font-size: 2rem;
-    }
-    .hero-right{
-        padding-top: 2rem;
-    }
-    .contactLinks{
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .skill-card{
-        width: 100%;
-        height: auto;
+    .skill-card {
+        width: 80px;
+        height: 220px;
     }
     .skill-card:hover{
-        width: 200px;
+        width: 260px;
+        transform: translateY(-4px) scale(1.08);
     }
-    .skill-content{
-        display: flex;
+
+    #coursework{
+        margin-top: 3rem;
     }
-    .skill-title{
-        writing-mode: horizontal-tb;
-        transform: rotate(0);
+    .timeline-horizontal{
+        gap: 2rem;
     }
-    #involve{
-        padding: 1rem;
+    .course-box{
+        min-width: 150px;
+        padding: 0.75rem;
     }
+
+    #projects{
+        padding: 2rem 1rem;
+        max-width: 1100px;
+    }
+    .project{
+        flex-direction: column !important;
+        text-align: center;
+        padding: 2rem;
+    }
+    .project-image{
+        max-width: 280px;
+    }
+    .project-info h3{
+        font-size: 1.5rem;
+    }
+    .project-info p{
+        font-size: 0.95rem;
+    }
+
     .involvement-container{
         gap: 1rem;
     }
     .involvement-card{
-        padding: 1rem;
-        font-size: 0.9rem;
+        padding: 1.25rem;
     }
-    #projects{
-        padding: 2rem 1rem;
-    }
+
     .facts-wrapper{
         flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
     }
     #collectedFacts{
         border-left: none;
         border-top: 1px solid #ddd;
-        margin-top: 1rem;
-        padding-left: 0;
         padding-top: 1rem;
+        max-height: 250px;
+    }
+}
+
+
+/* For Phone use */
+@media(max-width: 768px) {
+
+    body {
+        padding-top: 60px;
+    }
+
+    .navbar {
+        padding: 0.75rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.6rem;
+    }
+
+    header nav ul {
+        gap: 0.6rem;
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .hero-left, .hero-right {
+        width: 100%;
+        border-radius: 12px;
+        border: none;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .hero-left h1 {
+        font-size: 1.8rem;
+        white-space: normal;
+        line-height: 1.2;
+    }
+
+    .hero-left h3 {
+        font-size: 1rem;
+    }
+
+    .hero-right {
+        padding-top: 1rem;
+    }
+
+    .headshot {
+        width: 140px;
+        height: 140px;
+    }
+
+    .contactLinks {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .skill-card {
+        width: 90%;
+        height: auto;
+        padding: 1rem 0.5rem;
+    }
+
+    .skill-card:hover {
+        width: 95%;
+        transform: translateY(-4px);
+    }
+
+    .skill-title {
+        writing-mode: horizontal-tb;
+        transform: rotate(0);
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .skill-content {
+        display: flex;
+        padding: 0.5rem 0.5rem;
+    }
+
+    #skills-involvement {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        width: 94%;
+        gap: 2rem;
+        border-radius: 30px;
+    }
+
+    #involve {
+        padding: 1rem;
+    }
+
+    .involvement-container {
+        gap: 1rem;
+    }
+
+    .involvement-card {
+        padding: 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .facts-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #collectedFacts {
+        border-left: none;
+        border-top: 1px solid #ddd;
+        padding-top: 1rem;
+        margin-top: 1rem;
+        max-height: 200px;
+    }
+
+    #projects {
+        padding: 1rem;
+    }
+
+    .project {
+        flex-direction: column !important;
+        padding: 1.8rem 1rem;
+        text-align: center;
+    }
+
+    .project-image {
+        max-width: 240px;
+        width: 90%;
+    }
+
+    .project-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-info p {
+        font-size: 0.95rem;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    .timeline-wrapper::before {
+        top: 52%;
+    }
+
+    .timeline-horizontal {
+        height: 380px;
+    }
+
+    .course-box {
+        min-width: 140px;
+        padding: 0.6rem 0.75rem;
+    }
+
+    .course-box h3 {
+        font-size: 1rem;
+    }
+
+    .course-box .short {
+        font-size: 0.8rem;
+    }
+
+    .course-box .details {
+        font-size: 0.75rem;
+    }
+
+    .goal-timeline {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .goal-card {
+        padding: 1rem 1rem 2rem;
+    }
+
+    footer {
+        padding: 1rem;
+        font-size: 0.85rem;
     }
 }
